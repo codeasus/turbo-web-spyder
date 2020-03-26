@@ -57,7 +57,7 @@ def carFrameCrawler(parentThread, carFrame, httpHeader) :
 def mainCrawler(csvFile, startPage, endPage) :
     httpHeader         = {'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:73.0) Gecko/20100101 Firefox/73.0'}
     rootLink           = 'https://turbo.az/autos?page='
-    totalFetchedCarsPerThread = 0
+    totalFetchedCars = 0
 
     while(startPage <= endPage) :
         fetchedCars    = 0
@@ -74,7 +74,7 @@ def mainCrawler(csvFile, startPage, endPage) :
             write(csvFile, carsPropertyList)
 
             fetchedCars               = len(carsPropertyList)
-            totalFetchedCarsPerThread = totalFetchedCarsPerThread + fetchedCars
+            totalFetchedCars = totalFetchedCars + fetchedCars
             timeDiff                  = time.perf_counter() - startTime
             print("{0} ::: PAGE[ {1} ] ::: FETCHED-CARS[ {2} ] ::: TIME-SPENT[ {3:.3f} ]".format(threading.current_thread().name, startPage, fetchedCars, timeDiff))
             startPage                 = startPage + 1
@@ -83,7 +83,7 @@ def mainCrawler(csvFile, startPage, endPage) :
             print("[ ERROR ][ CONNECTION ] ::: [ CAR-FRAME ] ::: [ PAGE[ {} ] ] ::: [ {} ]".format(startPage, mainUrlRequest.status_code))
             break
 
-    return totalFetchedCarsPerThread
+    return totalFetchedCars
         
 if __name__ == "__main__":
     fieldNames      = ['Şəhər','Marka','Model','Buraxılış ili','Ban növü','Rəng',
