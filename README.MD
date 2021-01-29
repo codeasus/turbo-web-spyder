@@ -1,4 +1,4 @@
-  TurboSpyder is a side project that has been developed to collect enough data from the website named [Turbo.az](https://turbo.az/) in order to boost one of our machine learning project. As the website does not provide any kind of API for educational/"scientific" purposes, we had to it the "hard" way.
+  TurboSpyder is a side project that has been developed to collect enough data from the website named [Turbo.az](https://turbo.az/) in order to boost one of our machine learning projects. As the website does not provide any kind of API for educational/"scientific" purposes, we had to it the "hard" way.
 
 
 # Features!
