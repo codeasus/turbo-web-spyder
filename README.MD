@@ -5,7 +5,7 @@
 
   - Obviously, collect all the cars available in the webiste using brute-force methods.
   - Default multi-tread options are availablse however for better or desired performace/result code modification is requried.
-  - The code is not MESS! 
+  - The code is not a MESS! 
 
 
 License
