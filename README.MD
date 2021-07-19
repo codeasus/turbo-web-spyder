@@ -6,7 +6,7 @@
 ### Features!
 
   - Obviously, collect all the cars available in the webiste using brute-force methods.
-  - Default multi-tread options are available however for a better/desired performace/result code modification is requried.
+  - Default multi-tread options are available however for a better/desired performace/result the codebase needs to be refactored/modified.
   - The code is not a MESS! 
 
 
